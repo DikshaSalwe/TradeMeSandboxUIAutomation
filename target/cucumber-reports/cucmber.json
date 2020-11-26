@@ -1,0 +1,179 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2020-11-26T13:05:49.031Z",
+        "line": 23,
+        "name": "Query for used car",
+        "description": "",
+        "id": "query-exiting-used-car;query-for-used-car",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4121245400,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I go to \"https://www.tmsandbox.co.nz/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.tmsandbox.co.nz/\"",
+                  "offset": 8
+                }
+              ],
+              "location": "com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.goToTMSandboxPage(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 130997400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I query for \"1998 BMW 328i E46\" in searchbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1998 BMW 328i E46\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.queryForItem(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 189422800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I click on search button",
+            "match": {
+              "location": "com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.clickSearchButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3243186600,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I verify that \"1998 BMW 328i E46\" item is present",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1998 BMW 328i E46\"",
+                  "offset": 14
+                }
+              ],
+              "location": "com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.verifySearchedItemPresent(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-26T13:05:56.745Z",
+        "line": 29,
+        "name": "Details of used car",
+        "description": "",
+        "id": "query-exiting-used-car;details-of-used-car",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12998900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I am on search result page",
+            "match": {
+              "location": "com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.checkIfOnSearchResultPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 181997000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I click on \"1998 BMW 328i E46\" item",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1998 BMW 328i E46\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.clickOnListItem(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6511781700,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I verify Number plate",
+            "match": {
+              "location": "com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.verifyNumberPlate()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 24665600,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I verify Kilometres",
+            "match": {
+              "location": "com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.verifyIfKilometresPresent()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23439600,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I verify Body",
+            "match": {
+              "location": "com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.verifyIfBodyPresent()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 24460900,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I verify Seats",
+            "match": {
+              "location": "com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.verifyIfSeatsPresent()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Query exiting used car",
+    "description": "  Search for used car and verify deatis",
+    "id": "query-exiting-used-car",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Scenario1_QueryUsedCar.feature",
+    "tags": []
+  }
+]
