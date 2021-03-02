@@ -13,7 +13,7 @@
 		<selenium.version>3.141.59</selenium.version>
 		<testng.version>7.3.0</testng.version>
 		<logger.version>1.2.17</logger.version>
-		<surefire.version>2.18.1</surefire.version>
+		<surefire.version>3.0.0-M3</surefire.version>
 	</properties>
 	<dependencies>
 
@@ -114,6 +114,8 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${surefire.version}</version>
 				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+					<shutdown>kill</shutdown> <!-- Use it if required-->
 					<suiteXmlFiles>
 						<!--  TestNG suite xml files -->
 						<suiteXmlFile>TestNG.xml</suiteXmlFile>
