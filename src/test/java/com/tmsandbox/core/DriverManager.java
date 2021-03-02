@@ -45,7 +45,7 @@ public class DriverManager {
 				ChromeOptions options = new ChromeOptions();		
 				// set browser specific options here
 				options.setExperimentalOption("prefs", prefs);
-				options.addArguments("headless");
+				options.addArguments("--headless");
 				//options.setCapability(CapabilityType.BROWSER_NAME, browserName);
 				//options.setCapability(CapabilityType.BROWSER_VERSION, CHROME_VERSION);
 				
