@@ -1,16 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>TradeMeSandboxUI</groupId>
-  <artifactId>TradeMeSandboxUI</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>TradeMe Sandbox UI Automation</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>TradeMeSandboxUI</groupId>
+	<artifactId>TradeMeSandboxUI</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>TradeMe Sandbox UI Automation</name>
 	<description>Automation project for TradeMe Sandbox	</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<jre.version>1.8</jre.version>
 		<cucumber.version>6.9.0</cucumber.version>
 		<selenium.version>3.141.59</selenium.version>
 		<testng.version>7.3.0</testng.version>
 		<logger.version>1.2.17</logger.version>
+		<surefire.version>2.18.1</surefire.version>
 	</properties>
 	<dependencies>
 
@@ -44,7 +47,7 @@
 			<artifactId>cucumber-core</artifactId>
 			<version>${cucumber.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -80,6 +83,43 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>4.2.2</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>3.0.0-M5</version>
+		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<!-- Compiler plug-in -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${jre.version}</source>
+					<target>${jre.version}</target>
+				</configuration>
+			</plugin>
+			
+			<!-- Plugin to execute tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${surefire.version}</version>
+				<configuration>
+					<suiteXmlFiles>
+						<!--  TestNG suite xml files -->
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
