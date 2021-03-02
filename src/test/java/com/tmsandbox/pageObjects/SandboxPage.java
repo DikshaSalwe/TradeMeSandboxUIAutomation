@@ -20,7 +20,7 @@ public class SandboxPage extends CommonMethods{
 	//Elements
 	public By searchInput = By.id("searchString");
 	public By searchButton = By.xpath("//button[@value='Search']");
-	public By searchedItem = By.xpath("//a/div[@data-listingid='2149213502']");
+	public By searchedItem = By.xpath("//a//div[contains(text(), '1998 BMW 328i')]");
 	
 	
 	public String getXpathStringValue(String item) {

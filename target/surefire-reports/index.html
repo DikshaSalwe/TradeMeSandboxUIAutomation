@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Test_Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Test-Suite</span>
+              <span class="suite-name border-passed">Test-Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,26 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Test_Suite" class="hide-methods skipped suite-Test_Suite"> (hide)</a> <!-- hide-methods skipped suite-Test_Suite -->
-                      <a href="#" panel-name="suite-Test_Suite" class="show-methods skipped suite-Test_Suite"> (show)</a> <!-- show-methods skipped suite-Test_Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Test_Suite" class="hide-methods passed suite-Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Test_Suite -->
+                      <a href="#" panel-name="suite-Test_Suite" class="show-methods passed suite-Test_Suite"> (show)</a> <!-- show-methods passed suite-Test_Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Test_Suite">
+                    <div class="method-list-content passed suite-Test_Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Test_Suite" title="com.tmsandbox.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Query for used car&quot;, &quot;Optional[Query exiting used car]&quot;)">runScenario("Query for used car", "Optional[Query exiting used car]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="com.tmsandbox.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Details of used car&quot;, &quot;Optional[Query exiting used car]&quot;)">runScenario("Details of used car", "Optional[Query exiting used car]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Test_Suite -->
+                    </div> <!-- method-list-content passed suite-Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -124,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Test_Suite" class="panel Test_Suite">
-          <div class="suite-Test_Suite-class-skipped">
+          <div class="suite-Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.tmsandbox.runner.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -136,124 +131,12 @@
                   </a> <!-- runScenario("Query for used car", "Optional[Query exiting used car]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Query for used car", "Optional[Query exiting used car]")</span>
-                  <div class="stack-trace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:776)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:792)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:773)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:766)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:287)
-	at com.tmsandbox.core.DriverManager.createWebDriver(DriverManager.java:31)
-	at com.tmsandbox.core.DriverManager.getWebDriver(DriverManager.java:89)
-	at com.tmsandbox.runner.CreateSession.initDriver(CreateSession.java:25)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:915)
-	at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:101)
-	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:797)
-	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:649)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:567)
-	... 32 more
-Caused by: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)
-	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1495)
-	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1354)
-	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1288)
-	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:413)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:135)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:169)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:93)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:128)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:178)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
-	at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:139)
-	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:900)
-	... 36 more
-... Removed 23 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Details of used car&quot;, &quot;Optional[Query exiting used car]&quot;)">
-                  </a> <!-- runScenario("Details of used car", "Optional[Query exiting used car]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Details of used car", "Optional[Query exiting used car]")</span>
-                  <div class="stack-trace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:776)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:792)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:773)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:766)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:287)
-	at com.tmsandbox.core.DriverManager.createWebDriver(DriverManager.java:31)
-	at com.tmsandbox.core.DriverManager.getWebDriver(DriverManager.java:89)
-	at com.tmsandbox.runner.CreateSession.initDriver(CreateSession.java:25)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:915)
-	at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:101)
-	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:797)
-	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:649)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:567)
-	... 32 more
-Caused by: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)
-	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1495)
-	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1354)
-	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1288)
-	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:413)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:135)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:169)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:93)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:128)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:178)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
-	at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:139)
-	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:900)
-	... 36 more
-... Removed 23 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Test_Suite-class-skipped -->
+          </div> <!-- suite-Test_Suite-class-passed -->
         </div> <!-- panel Test_Suite -->
         <div panel-name="test-xml-Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -319,20 +202,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.tmsandbox.runner.TestRunner')
-data.setCell(0, 3, 0);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'runScenario')
-data.setCell(1, 2, 'com.tmsandbox.runner.TestRunner')
-data.setCell(1, 3, 0);
+data.setCell(0, 3, 19871);
 window.suiteTableData['Test_Suite']= { tableData: data, tableDiv: 'times-div-Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Test_Suite">
               </div> <!-- times-div-Test_Suite -->
             </div> <!-- times-div -->
@@ -360,8 +239,6 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.tmsandbox.runner.CreateSession</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">initDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
@@ -370,26 +247,22 @@ return data;
               <div class="chronological-class-name">com.tmsandbox.runner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">637 ms</span>
+                <span class="method-start">3993 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Query for used car", "Optional[Query exiting used car]")</span>
-                <span class="method-start">1393 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Details of used car", "Optional[Query exiting used car]")</span>
-                <span class="method-start">1395 ms</span>
+                <span class="method-start">4504 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">1396 ms</span>
+                <span class="method-start">24378 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tmsandbox.runner.CreateSession</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1521 ms</span>
+                <span class="method-start">24598 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

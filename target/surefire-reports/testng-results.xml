@@ -1,110 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-03T11:31:52 NZDT" name="Test-Suite" finished-at="2021-03-03T11:31:53 NZDT" duration-ms="854">
+  <suite started-at="2021-03-03T12:54:57 NZDT" name="Test-Suite" finished-at="2021-03-03T12:55:17 NZDT" duration-ms="20605">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.tmsandbox.runner.TestRunner@53976f5c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2021-03-03T11:31:52 NZDT" name="selenium-bdd-framework" finished-at="2021-03-03T11:31:53 NZDT" duration-ms="854">
+    <test started-at="2021-03-03T12:54:57 NZDT" name="selenium-bdd-framework" finished-at="2021-03-03T12:55:17 NZDT" duration-ms="20605">
       <class name="com.tmsandbox.runner.CreateSession">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.tmsandbox.runner.CreateSession@4e7912d8]" started-at="2021-03-03T11:31:52 NZDT" name="initDriver" finished-at="2021-03-03T11:31:52 NZDT" duration-ms="617" status="FAIL">
-          <exception class="io.github.bonigarcia.wdm.config.WebDriverManagerException">
-            <message>
-              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:776)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:792)
-at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:773)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:766)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:287)
-at com.tmsandbox.core.DriverManager.createWebDriver(DriverManager.java:31)
-at com.tmsandbox.core.DriverManager.getWebDriver(DriverManager.java:89)
-at com.tmsandbox.runner.CreateSession.initDriver(CreateSession.java:25)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:327)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:915)
-at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:101)
-at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:797)
-at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:649)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:567)
-... 32 more
-Caused by: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)
-at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1495)
-at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1354)
-at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1288)
-at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
-at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
-at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:413)
-at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:135)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:169)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:93)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:128)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:178)
-at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
-at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
-at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:139)
-at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:900)
-... 36 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.github.bonigarcia.wdm.config.WebDriverManagerException -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.tmsandbox.runner.CreateSession@4e7912d8]" started-at="2021-03-03T12:54:53 NZDT" name="initDriver" finished-at="2021-03-03T12:54:57 NZDT" duration-ms="3961" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tmsandbox.runner.CreateSession@4e7912d8]" started-at="2021-03-03T11:31:53 NZDT" name="tearDown" finished-at="1970-01-01T12:00:00 NZST" duration-ms="-1614724313746" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tmsandbox.runner.CreateSession@4e7912d8]" started-at="2021-03-03T12:55:17 NZDT" name="tearDown" finished-at="2021-03-03T12:55:23 NZDT" duration-ms="5623" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tmsandbox.runner.CreateSession -->
       <class name="com.tmsandbox.runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.tmsandbox.runner.TestRunner@53976f5c]" started-at="2021-03-03T11:31:52 NZDT" name="setUpClass" finished-at="2021-03-03T11:31:53 NZDT" duration-ms="736" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.tmsandbox.runner.TestRunner@53976f5c]" started-at="2021-03-03T12:54:57 NZDT" name="setUpClass" finished-at="2021-03-03T12:54:57 NZDT" duration-ms="496" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.tmsandbox.runner.TestRunner@53976f5c]" started-at="2021-03-03T11:31:53 NZDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-03T11:31:53 NZDT" duration-ms="0" status="SKIP">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.tmsandbox.runner.TestRunner@53976f5c]" started-at="2021-03-03T12:54:57 NZDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-03T12:55:17 NZDT" duration-ms="19871" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -117,186 +37,10 @@ at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.
               </value>
             </param>
           </params>
-          <exception class="io.github.bonigarcia.wdm.config.WebDriverManagerException">
-            <message>
-              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:776)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:792)
-at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:773)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:766)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:287)
-at com.tmsandbox.core.DriverManager.createWebDriver(DriverManager.java:31)
-at com.tmsandbox.core.DriverManager.getWebDriver(DriverManager.java:89)
-at com.tmsandbox.runner.CreateSession.initDriver(CreateSession.java:25)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:327)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:915)
-at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:101)
-at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:797)
-at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:649)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:567)
-... 32 more
-Caused by: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)
-at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1495)
-at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1354)
-at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1288)
-at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
-at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
-at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:413)
-at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:135)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:169)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:93)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:128)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:178)
-at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
-at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
-at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:139)
-at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:900)
-... 36 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.github.bonigarcia.wdm.config.WebDriverManagerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.tmsandbox.runner.TestRunner@53976f5c]" started-at="2021-03-03T11:31:53 NZDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-03T11:31:53 NZDT" duration-ms="0" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Details of used car"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Query exiting used car]"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.github.bonigarcia.wdm.config.WebDriverManagerException">
-            <message>
-              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:776)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:792)
-at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:773)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:766)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:573)
-at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:287)
-at com.tmsandbox.core.DriverManager.createWebDriver(DriverManager.java:31)
-at com.tmsandbox.core.DriverManager.getWebDriver(DriverManager.java:89)
-at com.tmsandbox.runner.CreateSession.initDriver(CreateSession.java:25)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:327)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:915)
-at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:101)
-at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:797)
-at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:649)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:567)
-... 32 more
-Caused by: java.net.UnknownHostException: chromedriver.storage.googleapis.com
-at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:800)
-at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1495)
-at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1354)
-at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1288)
-at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
-at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
-at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:413)
-at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:135)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:169)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:93)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:128)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
-at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
-at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:178)
-at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
-at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
-at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:139)
-at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:900)
-... 36 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.github.bonigarcia.wdm.config.WebDriverManagerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.tmsandbox.runner.TestRunner@53976f5c]" started-at="2021-03-03T11:31:53 NZDT" name="tearDownClass" finished-at="2021-03-03T11:31:53 NZDT" duration-ms="77" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.tmsandbox.runner.TestRunner@53976f5c]" started-at="2021-03-03T12:55:17 NZDT" name="tearDownClass" finished-at="2021-03-03T12:55:17 NZDT" duration-ms="181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
