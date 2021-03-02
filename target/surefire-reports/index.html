@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -105,6 +105,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-com_tmsandbox_runner_TestRunner" title="com.tmsandbox.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Query for used car&quot;, &quot;Optional[Query exiting used car]&quot;)">runScenario("Query for used car", "Optional[Query exiting used car]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-com_tmsandbox_runner_TestRunner" title="com.tmsandbox.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Details of used car&quot;, &quot;Optional[Query exiting used car]&quot;)">runScenario("Details of used car", "Optional[Query exiting used car]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-com_tmsandbox_runner_TestRunner -->
@@ -131,27 +136,27 @@
                   </a> <!-- runScenario("Query for used car", "Optional[Query exiting used car]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Query for used car", "Optional[Query exiting used car]")</span>
-                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &quot;I go to &quot;https://www.tmsandbox.co.nz/&quot;&quot; is undefined. You can implement it using the snippet(s) below:
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.tmsandbox.runner.CommonMethods.get(CommonMethods.java:29)
+	at com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.goToTMSandboxPage(StepDefination_QueryUsedCar.java:34)
+	at ✽.I go to &quot;https://www.tmsandbox.co.nz/&quot;(file:///D:/Study%20Folder/Java_Workspace/TradeMeSandboxUIAutomation/src/test/resources/features/Scenario1_QueryUsedCar.feature:6)
 
-@Given(&quot;I go to {string}&quot;)
-public void i_go_to(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
----
-Given(&quot;I go to {string}&quot;, (String string) -&gt; {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java8.PendingException();
-});
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Details of used car&quot;, &quot;Optional[Query exiting used car]&quot;)">
+                  </a> <!-- runScenario("Details of used car", "Optional[Query exiting used car]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Details of used car", "Optional[Query exiting used car]")</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.tmsandbox.runner.CommonMethods.getTitle(CommonMethods.java:37)
+	at com.tmsandbox.stepDefinations.StepDefination_QueryUsedCar.checkIfOnSearchResultPage(StepDefination_QueryUsedCar.java:58)
+	at ✽.I am on search result page(file:///D:/Study%20Folder/Java_Workspace/TradeMeSandboxUIAutomation/src/test/resources/features/Scenario1_QueryUsedCar.feature:13)
 
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:102)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:117)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
@@ -218,16 +223,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.tmsandbox.runner.TestRunner')
-data.setCell(0, 3, 151);
+data.setCell(0, 3, 620);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'com.tmsandbox.runner.TestRunner')
+data.setCell(1, 3, 33);
 window.suiteTableData['com_tmsandbox_runner_TestRunner']= { tableData: data, tableDiv: 'times-div-com_tmsandbox_runner_TestRunner'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 151 ms</span>
+              <span class="suite-total-time">Total running time: 653 ms</span>
               <div id="times-div-com_tmsandbox_runner_TestRunner">
               </div> <!-- times-div-com_tmsandbox_runner_TestRunner -->
             </div> <!-- times-div -->
@@ -262,11 +271,17 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Query for used car", "Optional[Query exiting used car]")</span>
-                <span class="method-start">384 ms</span>
+                <span class="method-start">1417 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Details of used car", "Optional[Query exiting used car]")</span>
+                <span class="method-start">2043 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">538 ms</span>
+                <span class="method-start">2082 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -14,13 +14,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.tmsandbox.helper.DriverType;
 
-import io.github.bonigarcia.wdm.ChromeDriverManager;
-import io.github.bonigarcia.wdm.EdgeDriverManager;
-import io.github.bonigarcia.wdm.FirefoxDriverManager;
-import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverManager {
 	private static WebDriver driver;
+	private static String CHROME_VERSION = "88.0.4324.104";
 
 	// Create browser driver object
 	public static void createWebDriver(String browserName) {
@@ -30,7 +28,7 @@ public class DriverManager {
 		
 		switch (type) {
 			case CHROME: // create chrome driver instance
-				ChromeDriverManager.getInstance().setup();
+				WebDriverManager.chromedriver().browserVersion(CHROME_VERSION).setup();
 				
 				// Set Capability options
 				capability.setBrowserName("chrome");
@@ -39,7 +37,7 @@ public class DriverManager {
 				if(OS.contains("Windows")) capability.setPlatform(Platform.WIN10);
 				else if(OS.contains("Linux")) capability.setPlatform(Platform.LINUX);
 				else if(OS.contains("Mac")) capability.setPlatform(Platform.MAC);
-				
+							
 				Map<String, Object> prefs = new HashMap<String, Object>();
 				//Pass the argument 1 to allow and 2 to block notification alert
 				prefs.put("profile.default_content_setting_values.notifications", 2);
@@ -47,28 +45,31 @@ public class DriverManager {
 				ChromeOptions options = new ChromeOptions();		
 				// set browser specific options here
 				options.setExperimentalOption("prefs", prefs);
+				//options.addArguments("headless");
+				//options.setCapability(CapabilityType.BROWSER_NAME, browserName);
+				//options.setCapability(CapabilityType.BROWSER_VERSION, CHROME_VERSION);
 				
 				driver = new ChromeDriver(options);
-				break;
-	
-			case FIREFOX: // create firefox driver instance
-				FirefoxDriverManager.getInstance().setup();
-				capability.setBrowserName("firefox");
-				driver = new FirefoxDriver();
-				break;
-				
-			case IE: // create IE driver instance
-				InternetExplorerDriverManager.getInstance().setup();
-				capability.setBrowserName("ie");
-				driver = new InternetExplorerDriver();
-				break;
-				
-			case EDGE: // create MS Edge driver instance
-				EdgeDriverManager.getInstance().setup();
-				capability.setBrowserName("edge");
-				driver = new EdgeDriver();
-				break;
-				
+			break;
+//	
+//			case FIREFOX: // create firefox driver instance
+//				FirefoxDriverManager.getInstance().setup();
+//				capability.setBrowserName("firefox");
+//				driver = new FirefoxDriver();
+//				break;
+//				
+//			case IE: // create IE driver instance
+//				InternetExplorerDriverManager.getInstance().setup();
+//				capability.setBrowserName("ie");
+//				driver = new InternetExplorerDriver();
+//				break;
+//				
+//			case EDGE: // create MS Edge driver instance
+//				EdgeDriverManager.getInstance().setup();
+//				capability.setBrowserName("edge");
+//				driver = new EdgeDriver();
+//				break;
+//				
 			default: // default - chrome driver instance
 				driver = null;
 		}

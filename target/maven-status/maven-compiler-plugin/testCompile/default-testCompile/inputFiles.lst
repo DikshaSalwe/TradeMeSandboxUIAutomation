@@ -1,7 +1,7 @@
-C:\Diksha_streamline_workspace\TradeMeSandboxUI\src\test\java\com\tmsandbox\pageObjects\SandboxPage.java
-C:\Diksha_streamline_workspace\TradeMeSandboxUI\src\test\java\com\tmsandbox\runner\CommonMethods.java
-C:\Diksha_streamline_workspace\TradeMeSandboxUI\src\test\java\com\tmsandbox\helper\DriverType.java
-C:\Diksha_streamline_workspace\TradeMeSandboxUI\src\test\java\com\tmsandbox\runner\CreateSession.java
-C:\Diksha_streamline_workspace\TradeMeSandboxUI\src\test\java\com\tmsandbox\core\DriverManager.java
-C:\Diksha_streamline_workspace\TradeMeSandboxUI\src\test\java\com\tmsandbox\runner\TestRunner.java
-C:\Diksha_streamline_workspace\TradeMeSandboxUI\src\test\java\com\tmsandbox\stepDefinations\StepDefination_QueryUsedCar.java
+D:\Study Folder\Java_Workspace\TradeMeSandboxUIAutomation\src\test\java\com\tmsandbox\runner\TestRunner.java
+D:\Study Folder\Java_Workspace\TradeMeSandboxUIAutomation\src\test\java\com\tmsandbox\runner\CreateSession.java
+D:\Study Folder\Java_Workspace\TradeMeSandboxUIAutomation\src\test\java\com\tmsandbox\helper\DriverType.java
+D:\Study Folder\Java_Workspace\TradeMeSandboxUIAutomation\src\test\java\com\tmsandbox\stepDefinations\StepDefination_QueryUsedCar.java
+D:\Study Folder\Java_Workspace\TradeMeSandboxUIAutomation\src\test\java\com\tmsandbox\core\DriverManager.java
+D:\Study Folder\Java_Workspace\TradeMeSandboxUIAutomation\src\test\java\com\tmsandbox\runner\CommonMethods.java
+D:\Study Folder\Java_Workspace\TradeMeSandboxUIAutomation\src\test\java\com\tmsandbox\pageObjects\SandboxPage.java
