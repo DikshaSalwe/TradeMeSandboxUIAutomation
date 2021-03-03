@@ -18,7 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverManager {
 	private static WebDriver driver;
-	private static String CHROME_VERSION = "88.0.4324.104";
+	private static String CHROME_VERSION = "88.0.4324.190";
 
 	// Create browser driver object
 	public static void createWebDriver(String browserName) {
@@ -29,7 +29,7 @@ public class DriverManager {
 		switch (type) {
 			case CHROME: // create chrome driver instance
 				WebDriverManager.chromedriver().browserVersion(CHROME_VERSION).setup();
-				
+				//System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 				// Set Capability options
 				capability.setBrowserName("chrome");
 				
